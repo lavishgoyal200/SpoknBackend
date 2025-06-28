@@ -19,10 +19,14 @@ const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
 app.use(cors({
-    // origin:"http://localhost:5173",
-    origin:["http://localhost:5173", "https://spokn1.vercel.app"],
+    origin: [
+        "http://localhost:5173", 
+        "https://spokn1.vercel.app", 
+        "https://spokn1-qmp3ij11l-lavishs-projects-36ec3d3b.vercel.app"
+    ],
     credentials: true
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
