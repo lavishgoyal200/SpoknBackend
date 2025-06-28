@@ -22,10 +22,11 @@ app.use(cors({
     origin: [
         "http://localhost:5173", 
         "https://spokn1.vercel.app", 
-        "https://spokn-lavishs-projects-36ec3d3b.vercel.app"
+        "https://spokn-lp4yu6i6n-lavishs-projects-36ec3d3b.vercel.app"
     ],
     credentials: true
 }));
+
 
 app.use(express.json());
 app.use(cookieParser());
