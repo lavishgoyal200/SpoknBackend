@@ -1,0 +1,1 @@
+import{a as e}from"./vendor-react-Bo3cQ_TK.js";import{i as a}from"./vendor-use-isomorphic-layout-effect-BsaTcJ-y.js";var u=function(r){var t=e.useRef(r);return a(function(){t.current=r}),t};export{u};

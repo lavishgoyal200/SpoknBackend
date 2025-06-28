@@ -20,7 +20,7 @@ const __dirname = path.resolve();
 
 app.use(cors({
     // origin:"http://localhost:5173",
-    origin:"https://spokn1.vercel.app",
+    origin:["http://localhost:5173", "https://spokn1.vercel.app"],
     credentials: true
 }));
 app.use(express.json());
@@ -33,10 +33,10 @@ app.use("/api/chat",chatRoutes);
 app.use("/api/checkin", checkinRoutes);
 
 if(process.env.NODE_ENV == "production"){
-    app.use(express.static(path.join(__dirname,"../frontend/dist")));
+    app.use(express.static(path.join(__dirname,"/dist")));
 
     app.get("*splat",(req,res)=>{
-        res.sendFile(path.join(__dirname,"../frontend","dist","index.html"));
+        res.sendFile(path.join(__dirname,"dist","index.html"));
     })
 }
 
